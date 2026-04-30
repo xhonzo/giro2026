@@ -542,8 +542,8 @@ body {
   <span class="topbar-label">Filter</span>
   <button class="fbtn active" onclick="filter('all',this)">Alle</button>
   <button class="fbtn fs" onclick="filter('sprint',this)">Sprint</button>
-  <button class="fbtn fb" onclick="filter('berg',this)">Berg</button>
-  <button class="fbtn fh" onclick="filter('heuvel',this)">Heuvel</button>
+  <button class="fbtn fb" onclick="filter('berg',this)">Bergetappe</button>
+  <button class="fbtn fh" onclick="filter('heuvel',this)">Heuvelrit</button>
   <button class="fbtn ft" onclick="filter('tijdrit',this)">Tijdrit</button>
   <div class="topbar-links">
     <a class="topbar-link startlijst" href="https://www.procyclingstats.com/race/giro-d-italia/2026/startlist" target="_blank">📋 Startlijst</a>
@@ -578,16 +578,16 @@ const stages = [
     type:'sprint', stars:1, badges:['sprint'],
     verdict:'Vlakke openingsetappe langs de Zwarte Zee. Het parcours volgt de kustlijn en eindigt met een circuit van 11 km door Burgas. In de laatste kilometer loopt de weg licht op richting de finish, wat de timing van de sprint belangrijk maakt. Er is niets dat het peloton kan splitsen.<br><br><b>Finishtype:</b> Vlakke sprint, lichte stijging laatste 300m.<br><b>Verwacht scenario:</b> Massasprint. De ploegen van de sprinters controleren de dag volledig. Vlucht wordt teruggepakt. Eerste maglia rosa gaat naar de snelste man.',
     profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:BASE+'etappe-1-profiel.jpg?01'},
+      {type:'sprint', label:'Etappeprofiel', src:BASE+'etappe-1-profiel.jpg?01'},
       {type:'finish', label:'Finishprofiel (laatste 3 km)', src:BASE+'etappe-1-profiel-finale.jpg'}
     ]
   },
   {
     num:2, date:'9 mei', route:'Burgas – Veliko Tarnovo', km:221, hm:2411,
-    type:'heuvel', stars:3, badges:['heuvel','bergaankomst'],
+    type:'heuvel', stars:3, badges:['heuvel'],
     verdict:'Lange etappe landinwaarts met drie gecategoriseerde klimmen. De Byala Pass en Vratnik Pass komen halverwege en zijn ver genoeg van de finish om geen doorslaggevende rol te spelen. De Lyaskovets-kloosterklim ligt op slechts 9 km van de finish met een opening boven de 10%. Na de top volgt een korte afdaling waarna de finish licht bergop gaat. De roze trui wisselt hier waarschijnlijk van schouder.<br><br><b>Sleutelklim:</b> Lyaskovets (3,6 km / 7,5%, opening >10%, top op 9 km van finish).<br><b>Finishtype:</b> Licht bergop na korte afdaling.<br><b>Verwacht scenario:</b> De klim is te zwaar voor pure sprinters maar te kort voor grote tijdsverschillen. Verwacht een reducé sprint of solo aanval vanuit een kleine kopgroep. Een puncher die ook kan sprinten na een klim heeft hier de beste kaarten.',
     profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:BASE+'etappe-2-profiel.jpg?01'},
+      {type:'heuvel', label:'Etappeprofiel', src:BASE+'etappe-2-profiel.jpg?01'},
       {type:'klim',   label:'Slotklim: Lyaskovets', src:BASE+'etappe-2-lyaskovets.jpg'},
       {type:'finish', label:'Finishprofiel (laatste 3 km)', src:BASE+'etappe-2-profiel-finale.jpg'}
     ]
@@ -597,64 +597,64 @@ const stages = [
     type:'sprint', stars:1, badges:['sprint'],
     verdict:'Laatste Bulgaarse etappe. De Borovets Pass is de enige serieuze hindernis maar de top ligt op 70 km van de finish in Sofia. Na de afdaling volgt een lange volledig vlakke aanloop van 7 km — ideaal voor een lead-out.<br><br><b>Sleutelklim:</b> Borovets Pass (9,2 km / 5,4%, top op 70 km van finish).<br><b>Finishtype:</b> Vlakke massasprint.<br><b>Verwacht scenario:</b> Massasprint. De klim ligt te ver voor een doorslaggevende selectie. Zwaardere sprinters zonder klimvermogen kunnen afhaken op de Borovets, maar de meeste sprinters halen Sofia.',
     profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:BASE+'etappe-3-profiel.jpg?01'},
+      {type:'sprint', label:'Etappeprofiel', src:BASE+'etappe-3-profiel.jpg?01'},
       {type:'finish', label:'Finishprofiel (laatste 3 km)', src:BASE+'etappe-3-profiel-finale.jpg'}
     ]
   },
   {
     num:4, date:'12 mei', route:'Catanzaro – Cosenza', km:138, hm:1681,
-    type:'heuvel', stars:2, badges:['heuvel'],
+    type:'sprint', stars:2, badges:['sprint', 'sprint_inhoud'],
     verdict:'Eerste Italiaanse etappe na de transfer. De Cozzo Tunno is de zwaarste klim maar de top ligt op 40 km van de finish. Na een gestapte afdaling loopt de finish in Cosenza licht op met 3,7% — genoeg om een verschil te maken als de groep klein is, maar niet genoeg om een sprint te voorkomen als het peloton samenkomt.<br><br><b>Sleutelklim:</b> Cozzo Tunno (14,4 km / 5,9%, top op 40 km van finish).<br><b>Finishtype:</b> Licht oplopend (3,7%) in Cosenza.<br><b>Verwacht scenario:</b> Klassiek dilemma: te zwaar voor pure sprinters, te licht voor klimmers om weg te blijven. De vlucht van de dag heeft een reële kans. Sprinters met klimvermogen die de Cozzo Tunno overleven kunnen hergroeperen en alsnog meesprinten op de licht oplopende finish.',
     profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:BASE+'etappe-4-profiel.jpg?01'},
+      {type:'heuvel', label:'Etappeprofiel', src:BASE+'etappe-4-profiel.jpg?01'},
       {type:'finish', label:'Finishprofiel (laatste 3 km)', src:BASE+'etappe-4-profiel-finale.jpg'}
     ]
   },
   {
     num:5, date:'13 mei', route:'Praia a Mare – Potenza', km:203, hm:3740,
-    type:'heuvel', stars:3, badges:['heuvel','bergaankomst'],
+    type:'heuvel', stars:3, badges:['heuvel', 'bergaankomst'],
     verdict:'Zware heuvelrit van 203 km met 3.740 hoogtemeters. De Monte Grande di Viggiano piekt op 50 km van de finish. Na de klim is er weinig rust: een korte afdaling gevolgd door ongecategoriseerde kickers, waarna de weg pas echt vlakt op 30 km van de finish. De aankomst in Potenza loopt licht bergop. Dit is het type etappe waarbij je de ronde niet wint maar wel kunt verliezen — GC-ploegen kunnen hier al ploeggenoten inzetten om rivalen te testen.<br><br><b>Sleutelklim:</b> Monte Grande di Viggiano (6,6 km / 9,2%, top op 50 km van finish). Ongecategoriseerde kickers tot op 30 km van finish.<br><b>Finishtype:</b> Licht bergop in Potenza.<br><b>Verwacht scenario:</b> Aanvallersrit. De zware klim maakt het te moeilijk voor pure sprinters. Voor klimmers ligt de top te ver om solo weg te blijven. Een klimmende aanvaller wint dit. GC-mannen volgen en bewaken elkaar maar vallen niet aan.',
     profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:BASE+'etappe-5-profiel.jpg?01'},
+      {type:'heuvel', label:'Etappeprofiel', src:BASE+'etappe-5-profiel.jpg?01'},
       {type:'klim',   label:'Monte Grande di Viggiano', src:BASE+'etappe-5-monte-grande-di-viggiano.jpg'},
       {type:'finish', label:'Finishprofiel (laatste 3 km)', src:BASE+'etappe-5-profiel-finale.jpg'}
     ]
   },
   {
     num:6, date:'14 mei', route:'Paestum – Napels', km:161, hm:500,
-    type:'sprint', stars:2, badges:['sprint'],
+    type:'sprint', stars:2, badges:['sprint', 'tech_sprint'],
     verdict:'Vijfde jaar op rij een aankomst in Napels. Het parcours volgt grotendeels de Campaanse kust en is vlak tot aan de stad. De laatste kilometer heeft een oplopende kasseistrook van 4% met een U-bocht op 400m van de finish — dat maakt dit technisch veeleisend en gevaarlijk voor positionering. Een explosieve sprinter die ook technisch rijdt heeft hier de voorkeur boven een pure massasprinter.<br><br><b>Finishtype:</b> Sprint, maar technisch. Kasseienstrook 4% + U-bocht op 400m.<br><b>Verwacht scenario:</b> Massasprint als het peloton samenkomt. De kasseien en U-bocht bevoordelen een explosieve, technische sprinter. Val- en positioneringsrisico in de finale.',
     profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:BASE+'etappe-6-profiel.jpg?01'},
+      {type:'sprint', label:'Etappeprofiel', src:BASE+'etappe-6-profiel.jpg?01'},
       {type:'finish', label:'Finishprofiel (laatste 3 km)', src:BASE+'etappe-6-profiel-finale.jpg'}
     ]
   },
   {
     num:7, date:'15 mei', route:'Formia – Blockhaus', km:246, hm:4600,
-    type:'berg', stars:5, badges:['berg','bergaankomst'],
+    type:'berg', stars:5, badges:['berg', 'bergaankomst'],
     verdict:'De langste etappe van de Giro en de eerste echte GC-dag. Na een lange grotendeels vlakke kustrit begint het echte werk. De Roccaraso (cat. 2) fungeert als opwarmer maar de Blockhaus is waar de verschillen gemaakt worden. Via Roccamorice is dit de zwaarste kant: de laatste 10 km liggen consistent boven de 10%. De lengte van de etappe telt ook mee — wie in de eerste 200 km al energie heeft verloren betaalt dat op de Blockhaus. Hindley won hier in 2022 en pakte uiteindelijk de eindzege.<br><br><b>Sleutelklimmen:</b> Roccaraso (cat. 2, opwarmer). Blockhaus via Roccamorice (13,6 km / 8,4%, finale 10 km >10%).<br><b>Finishtype:</b> Bergop finish, steil en consistent.<br><b>Verwacht scenario:</b> Eerste grote GC-afrekening. Pure klimmers en klassementsmannen komen hier naar voren. Wie hier zwak rijdt verliest de Giro al in week 1.',
     profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:BASE+'etappe-7-profiel.jpg?01'},
+      {type:'berg', label:'Etappeprofiel', src:BASE+'etappe-7-profiel.jpg?01'},
       {type:'klim',   label:'Slotklim: Blockhaus', src:BASE+'etappe-7-blockhaus.jpg'},
       {type:'finish', label:'Finishprofiel (laatste 3 km)', src:BASE+'etappe-7-profiel-finale.jpg'}
     ]
   },
   {
     num:8, date:'16 mei', route:'Chieti – Fermo', km:185, hm:2800,
-    type:'heuvel', stars:3, badges:['heuvel'],
+    type:'heuvel', stars:3, badges:['heuvel', 'bergaankomst'],
     verdict:'De klassieke muri-rit. De eerste 100 km zijn vlak en onbeduidend, maar de laatste 60 km zijn een aaneenschakeling van kasseimuurtjes door de Marche-heuvels. De Muro del Ferro (0,5 km / 11,1%) is explosief en gevaarlijk. De Capodarco (4 km / 5,3%) volgt daarna, waarna de slotklim naar Fermo (3,4 km / 6,1%) het af maakt — met een strook van 700 meter op 13,5%. De inconsistente, kasseistijl van klimmen maakt dit ideaal voor punchers en aanvallers, maar ook AK-mannen die van dit soort rommelige ritten houden kunnen meedoen.<br><br><b>Sleutelklimmen:</b> Muro del Ferro (0,5 km / 11,1%). Capodarco (4 km / 5,3%). Fermo finish (3,4 km / 6,1%, met 700m op 13,5%).<br><b>Finishtype:</b> Steile en inconsistente slotklim naar stadscentrum Fermo.<br><b>Verwacht scenario:</b> Dag voor punchers, aanvallers en AK-mannen die van explosieve, chaotische ritten houden. GC-kopmannen lopen hier risico op valpartijen en stressschade.',
     profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:BASE+'etappe-8-profiel.jpg?01'},
+      {type:'heuvel', label:'Etappeprofiel', src:BASE+'etappe-8-profiel.jpg?01'},
       {type:'klim',   label:'Muro di Capodarco', src:BASE+'etappe-8-muro-di-capodarco.jpg'},
       {type:'finish', label:'Finishprofiel (laatste 3 km)', src:BASE+'etappe-8-profiel-finale.jpg'}
     ]
   },
   {
     num:9, date:'17 mei', route:'Cervia – Corno alle Scale', km:184, hm:2900,
-    type:'berg', stars:4, badges:['berg','bergaankomst'],
+    type:'berg', stars:4, badges:['berg', 'bergaankomst'],
     verdict:'Sluitstuk van week 1. Start vlak in Cervia aan de Adriatische kust, daarna richting de Bolognese Apennijnen. De Querciola en Corno alle Scale volgen elkaar vrijwel direct op — er zit nauwelijks afdaling tussen. De Corno alle Scale wordt gekenmerkt door zijn lengte, maar de finale 3 km zijn significant steiler en liggen boven de 8%. Simoni won hier solo in 2004. Wie na de Blockhaus nog vers is kan hier aanvallen.<br><br><b>Sleutelklimmen:</b> Querciola (direct gevolgd door). Corno alle Scale (12,8 km / 5,9%, finale 3 km >8%).<br><b>Finishtype:</b> Bergop finish, steiler naar boven toe.<br><b>Verwacht scenario:</b> Tweede GC-dag van week 1. De combinatie van twee klimmen zonder rust ertussen maakt het zwaarder dan het profiel doet vermoeden. Pure klimmers of GC-mannen die de Blockhaus goed overleefden kunnen hier aanvallen.',
     profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:BASE+'etappe-9-profiel.jpg?01'},
+      {type:'berg', label:'Etappeprofiel', src:BASE+'etappe-9-profiel.jpg?01'},
       {type:'finish', label:'Finishprofiel (laatste 3 km)', src:BASE+'etappe-9-profiel-finale.jpg'}
     ]
   },
@@ -663,59 +663,59 @@ const stages = [
     type:'tijdrit', stars:4, badges:['tijdrit'],
     verdict:'Enige tijdrit van de Giro en met 40 km meteen een serieuze test. Het parcours volgt vrijwel volledig de Toscaanse kust van Viareggio naar Massa met twee U-bochten. Het is vlak en recht — pure krachtmeting. Wind langs de kust kan een grote rol spelen in materiaalvereisten. Je kan de Giro hier niet winnen maar wel verliezen. Klimmers die slecht tijdrijden bloeden hier.<br><br><b>Finishtype:</b> Tijdrit, vlak.<br><b>Verwacht scenario:</b> Tijdrijders en GC-mannen die ook sterk tegen de klok zijn pakken hier tijd. Pure klimmers verliezen. Een minuut tijdsverschil is hier realistisch tussen een goede en slechte tijdrijder.',
     profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:BASE+'etappe-10-profiel.jpg'}
+      {type:'tijdrit', label:'Etappeprofiel', src:BASE+'etappe-10-profiel.jpg'}
     ]
   },
   {num:11,date:'20 mei',route:'Porcari – Chiavari',km:178,hm:1900,type:'heuvel',stars:2,badges:['heuvel'],verdict:'Heuvelrit langs de Toscaanse en Ligurische kust. De Colle di Gualtarola (~10 km / 6,3%) en de Passo del Termine komen in snelle opeenvolging. De San Bartolomeo (4,6 km / 6,3%) heeft de top op 9 km van de finish — te dichtbij voor sprinters om terug te keren als ze gelost worden. Het profiel is verraderlijker dan de tweestelaanduiding suggereert.<br><br><b>Sleutelklimmen:</b> Colle di Gualtarola (~10 km / 6,3%). San Bartolomeo (4,6 km / 6,3%, top op 9 km van finish).<br><b>Finishtype:</b> Sprint reducé of aanval.<br><b>Verwacht scenario:</b> De opeenvolging van klimmen lossen pure sprinters. Een klimmende aanvaller of sterke puncher wint dit. GC-mannen bewaren krachten voor grotere dagen.',profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-11-profiel.jpg'},
+      {type:'heuvel', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-11-profiel.jpg'},
       {type:'klim', label:'Slotklim', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/me8R1SPIWOZw0PT0iKS1_150426-085833.jpg?v=20260415085833'},
       {type:'finish', label:'Finishprofiel', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/vZSphonh77xs8znpq2ox_150426-085942.jpg?v=20260415085942'}
     ]},
-  {num:12,date:'21 mei',route:'Imperia – Novi Ligure',km:195,hm:2200,type:'heuvel',stars:2,badges:['heuvel'],verdict:'Over de Passo del Turchino (de klassieke Milaan-Sanremo-klim) richting Novi Ligure. Technisch veeleisend maar geen finish bergop. Typisch vluchters-rit. Klassementsrenners sparen krachten voor wat nog komt.',profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-12-profiel.jpg'},
+  {num:12,date:'21 mei',route:'Imperia – Novi Ligure',km:195,hm:2200,type:'sprint',stars:2,badges:['sprint'],verdict:'Over de Passo del Turchino (de klassieke Milaan-Sanremo-klim) richting Novi Ligure. Technisch veeleisend maar geen finish bergop. Typisch vluchters-rit. Klassementsrenners sparen krachten voor wat nog komt.',profiles:[
+      {type:'sprint', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-12-profiel.jpg'},
       {type:'finish', label:'Finishprofiel', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/Zc14KeZCHpIWySCcGcsn_150426-095106.jpg?v=20260415095106'}
     ]},
-  {num:13,date:'22 mei',route:'Alessandria – Verbania',km:165,hm:2100,type:'heuvel',stars:2,badges:['heuvel'],verdict:'Finish in Verbania, geboorteplaats van Filippo Ganna. Heuvelachtig maar geen finish bergop. Punch-sprint of sprint reducé. Lokaal publiek maakt het bijzonder.',profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-13-profiel.jpg'},
+  {num:13,date:'22 mei',route:'Alessandria – Verbania',km:165,hm:2100,type:'sprint',stars:2,badges:['sprint', 'sprint_inhoud'],verdict:'Finish in Verbania, geboorteplaats van Filippo Ganna. Heuvelachtig maar geen finish bergop. Punch-sprint of sprint reducé. Lokaal publiek maakt het bijzonder.',profiles:[
+      {type:'heuvel', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-13-profiel.jpg'},
       {type:'klim', label:'Slotklim', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/Uc2Iz0oAXFxuAtxZX6wC_150426-101559.jpg?v=20260415101559'},
       {type:'finish', label:'Finishprofiel', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/9ykK7Y34XVUveeOh8L3o_150426-101632.jpg?v=20260415101632'}
     ]},
-  {num:14,date:'23 mei',route:'Aosta – Pila',km:155,hm:4400,type:'berg',stars:4,badges:['berg','bergaankomst'],verdict:'Zwaarste etappe van week 2 en een vijfsterrenrit. De beklimming begint vrijwel direct na de start met de Saint-Barthélémy — er is geen opwarming. Daarna volgen de Doues, de Lin Noir en de Verrogne. De slotklim naar Pila is lang en consistent. Met vier serieuze klimmen en bijna 4.400 hoogtemeters is dit de zwaarste dag van week 2.<br><br><b>Sleutelklimmen:</b> Saint-Barthélémy (17,6 km / 5,5%, direct na start). Lin Noir (7,5 km / 7,8%). Pila finish (16,6 km / 7,1%).<br><b>Finishtype:</b> Bergop finish, lang en consistent.<br><b>Verwacht scenario:</b> Grote GC-dag. Alle klassementskopmannen gaan hier los. De vroege Saint-Barthélémy maakt het ook interessant voor een vroege vlucht. In de finale naar Pila bepaalt wie er echt de beste benen heeft in week 2.',profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-14-profiel.jpg'},
+  {num:14,date:'23 mei',route:'Aosta – Pila',km:155,hm:4400,type:'berg',stars:4,badges:['berg', 'bergaankomst'],verdict:'Zwaarste etappe van week 2 en een vijfsterrenrit. De beklimming begint vrijwel direct na de start met de Saint-Barthélémy — er is geen opwarming. Daarna volgen de Doues, de Lin Noir en de Verrogne. De slotklim naar Pila is lang en consistent. Met vier serieuze klimmen en bijna 4.400 hoogtemeters is dit de zwaarste dag van week 2.<br><br><b>Sleutelklimmen:</b> Saint-Barthélémy (17,6 km / 5,5%, direct na start). Lin Noir (7,5 km / 7,8%). Pila finish (16,6 km / 7,1%).<br><b>Finishtype:</b> Bergop finish, lang en consistent.<br><b>Verwacht scenario:</b> Grote GC-dag. Alle klassementskopmannen gaan hier los. De vroege Saint-Barthélémy maakt het ook interessant voor een vroege vlucht. In de finale naar Pila bepaalt wie er echt de beste benen heeft in week 2.',profiles:[
+      {type:'berg', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-14-profiel.jpg'},
       {type:'klim', label:'Slotklim: Pila', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/qi6gn62cEdLkBdzobu7d_150426-104524.jpg?v=20260415104524'},
       {type:'finish', label:'Finishprofiel', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/uwYBLX2n79vaRGBmEIK5_150426-104716.jpg?v=20260415104716'}
     ]},
   {num:15,date:'24 mei',route:'Voghera – Milaan',km:165,hm:400,type:'sprint',stars:1,badges:['sprint'],verdict:'De flatste etappe van de hele Giro. Na de slopende bergdag van gisteren is dit een welkome rustdag voor de klassementsrenners. De finale in het stadscentrum van Milaan is een klassiek stadscircuit. Puur voor de sprinters.<br><br><b>Finishtype:</b> Vlakke massasprint, stadscircuit Milaan.<br><b>Verwacht scenario:</b> Massasprint. GC-mannen rijden mee maar bewaren krachten voor de slotweek. Einde van week 2.',profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-15-profiel.jpg'},
+      {type:'sprint', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-15-profiel.jpg'},
       {type:'finish', label:'Finishprofiel', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/KqFSAj4sXvutuAyMrD3h_150426-023349.jpg?v=20260415143349'}
     ]},
-  {num:16,date:'26 mei',route:'Bellinzona – Carì (ZWI)',km:113,hm:2950,type:'berg',stars:5,badges:['berg','bergaankomst'],verdict:'Week 3 opent met een bom. Slechts 113 km maar bijna 3.000 hoogtemeters — volledig in Zwitserland. Het circuit van Bellinzona wordt twee keer gereden met de Torre en de Leontica als opwarmingsklimmen. De slotklim naar Carì is het echte werk. De korte afstand betekent dat het tempo al vroeg hoog ligt — er is geen tijd om te wachten.<br><br><b>Sleutelklimmen:</b> Torre + Leontica (opwarming, 2 lussen). Carì finish (11,8 km / 8%).<br><b>Finishtype:</b> Bergop finish, steil en explosief.<br><b>Verwacht scenario:</b> Dit kan zowel voor GC-mannen als aanvallers zijn. De korte afstand maakt het moeilijk voor ploegen om volledig te controleren. Een klimmende aanvaller die ver van huis gaat heeft een reële kans. De tactiek van Visma is hier cruciaal — rijden ze defensief of offensief?',profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-16-profiel.jpg'},
+  {num:16,date:'26 mei',route:'Bellinzona – Carì (ZWI)',km:113,hm:2950,type:'berg',stars:5,badges:['berg', 'bergaankomst'],verdict:'Week 3 opent met een bom. Slechts 113 km maar bijna 3.000 hoogtemeters — volledig in Zwitserland. Het circuit van Bellinzona wordt twee keer gereden met de Torre en de Leontica als opwarmingsklimmen. De slotklim naar Carì is het echte werk. De korte afstand betekent dat het tempo al vroeg hoog ligt — er is geen tijd om te wachten.<br><br><b>Sleutelklimmen:</b> Torre + Leontica (opwarming, 2 lussen). Carì finish (11,8 km / 8%).<br><b>Finishtype:</b> Bergop finish, steil en explosief.<br><b>Verwacht scenario:</b> Dit kan zowel voor GC-mannen als aanvallers zijn. De korte afstand maakt het moeilijk voor ploegen om volledig te controleren. Een klimmende aanvaller die ver van huis gaat heeft een reële kans. De tactiek van Visma is hier cruciaal — rijden ze defensief of offensief?',profiles:[
+      {type:'berg', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-16-profiel.jpg'},
       {type:'klim', label:'Slotklim: Carì', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/EBmccvkLasM3lCKKa0ri_150426-024927.jpg?v=20260415144927'},
       {type:'finish', label:'Finishprofiel', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/6jvyPY2S69c8JUTuSVF9_150426-025015.jpg?v=20260415145015'}
     ]},
-  {num:17,date:'27 mei',route:"Cassano d'Adda – Andalo",km:162,hm:2600,type:'berg',stars:3,badges:['berg','bergaankomst'],verdict:'Finish bergop in Andalo. Derde week, vermoeide benen. Niet de zwaarste dag maar een finish bergop kan wél GC-schade aanrichten.',profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-17-profiel.jpg'},
+  {num:17,date:'27 mei',route:"Cassano d'Adda – Andalo",km:162,hm:2600,type:'heuvel',stars:3,badges:['heuvel', 'bergaankomst'],verdict:'Finish bergop in Andalo. Derde week, vermoeide benen. Niet de zwaarste dag maar een finish bergop kan wél GC-schade aanrichten.',profiles:[
+      {type:'heuvel', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-17-profiel.jpg'},
       {type:'klim', label:'Slotklim: Andalo', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/OvAhVc8HnVlpaZJVCBio_280426-104017.jpg?v=20260428104017'},
       {type:'finish', label:'Finishprofiel', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/4SIR6glidEM7RUDTk0dH_150426-030643.jpg?v=20260415150643'}
     ]},
   {num:18,date:'28 mei',route:'Fai della Paganella – Pieve di Soligo',km:148,hm:1800,type:'heuvel',stars:2,badges:['heuvel'],verdict:'Overgangsrit door de Prosecco-heuvels. De Muro di Ca\' del Poggio (ongecategoriseerd) ligt op ongeveer 10 km van de finish en is de enige serieuze hindernis. Na de top volgt een vlakke aanloop naar Pieve di Soligo. In week 3 heeft een vermoeid peloton moeite met het volledig controleren van een sterke vlucht. GC-mannen sparen krachten met het oog op de koninginnenrit van morgen.<br><br><b>Sleutelklim:</b> Muro di Ca\' del Poggio (ongecategoriseerd, top op ~10 km van finish).<br><b>Finishtype:</b> Vlakke aanloop na korte klim.<br><b>Verwacht scenario:</b> De vlucht van de dag krijgt hier waarschijnlijk de ruimte. GC-ploegen controleren niet volledig met het oog op morgen. Een sterke aanvaller of puncher kan de Muro als springplank gebruiken. Sprinters met inhoud kunnen ook meespelen als de klim geen grote schifting maakt.',profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-18-profiel.jpg'},
+      {type:'heuvel', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-18-profiel.jpg'},
       {type:'klim', label:'Muro del Poggio', src:'https://cdn.touretappe.nl/images/giro/2022/etappe-18-muro-poggio.jpg'},
       {type:'finish', label:'Finishprofiel', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/KrUdE6ZsQTrkkKuSoSZw_150426-032120.jpg?v=20260415152120'}
     ]},
-  {num:19,date:'29 mei',route:'Feltre – Piani di Pezzè',km:151,hm:5000,type:'berg',stars:5,badges:['berg','bergaankomst'],verdict:'De absolute koninginnenrit van deze Giro. 5.000 hoogtemeters in 151 km. Na de Passo Duran en de Forcella Staulanza volgt de Passo Giau — de Cima Coppi van deze Giro op 2.305 meter. Bernal lanceerde zijn winnende aanval hier in 2021. Na de Giau volgt de Passo Falzarego, waarna de finish op Piani di Pezzè het af maakt. Dit is de dag waarop de Giro beslist wordt.<br><br><b>Sleutelklimmen:</b> Passo Duran. Forcella Staulanza. Passo Giau (Cima Coppi, 2.305m). Passo Falzarego. Piani di Pezzè finish (4,9 km / 9,8%).<br><b>Finishtype:</b> Bergop finish, steil.<br><b>Verwacht scenario:</b> Alles of niets voor de GC-mannen. Pure klimmers en klassementsrenners domineren. Wie nog kans wil maken op de eindzege valt hier aan. Tijdsverschillen kunnen enorm oplopen op een slechte dag.',profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-19-profiel.jpg'},
+  {num:19,date:'29 mei',route:'Feltre – Piani di Pezzè',km:151,hm:5000,type:'berg',stars:5,badges:['berg', 'bergaankomst'],verdict:'De absolute koninginnenrit van deze Giro. 5.000 hoogtemeters in 151 km. Na de Passo Duran en de Forcella Staulanza volgt de Passo Giau — de Cima Coppi van deze Giro op 2.305 meter. Bernal lanceerde zijn winnende aanval hier in 2021. Na de Giau volgt de Passo Falzarego, waarna de finish op Piani di Pezzè het af maakt. Dit is de dag waarop de Giro beslist wordt.<br><br><b>Sleutelklimmen:</b> Passo Duran. Forcella Staulanza. Passo Giau (Cima Coppi, 2.305m). Passo Falzarego. Piani di Pezzè finish (4,9 km / 9,8%).<br><b>Finishtype:</b> Bergop finish, steil.<br><b>Verwacht scenario:</b> Alles of niets voor de GC-mannen. Pure klimmers en klassementsrenners domineren. Wie nog kans wil maken op de eindzege valt hier aan. Tijdsverschillen kunnen enorm oplopen op een slechte dag.',profiles:[
+      {type:'berg', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-19-profiel.jpg'},
       {type:'klim', label:'Slotklim: Piani di Pezzè', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/qgRYBJK83DT8OzNWL2f8_150426-033727.jpg?v=20260415153727'},
       {type:'finish', label:'Finishprofiel', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/ZWgvE8fe2lXn9Jwy0Dlj_150426-033816.jpg?v=20260415153816'}
     ]},
-  {num:20,date:'30 mei',route:'Gemona del Friuli – Piancavallo',km:200,hm:3827,type:'berg',stars:5,badges:['berg','bergaankomst'],verdict:'Dubbele beklimming van Piancavallo (14,5 km / 7,8%). Eerst de Clauzetto, dan Piancavallo twee keer met een lus via Lago di Barcis. Definitieve strijd om de maglia rosa. Pantani won hier in 1998.',profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-20-profiel.jpg'},
+  {num:20,date:'30 mei',route:'Gemona del Friuli – Piancavallo',km:200,hm:3827,type:'berg',stars:5,badges:['berg', 'bergaankomst'],verdict:'Dubbele beklimming van Piancavallo (14,5 km / 7,8%). Eerst de Clauzetto, dan Piancavallo twee keer met een lus via Lago di Barcis. Definitieve strijd om de maglia rosa. Pantani won hier in 1998.',profiles:[
+      {type:'berg', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-20-profiel.jpg'},
       {type:'klim', label:'Slotklim: Piancavallo', src:'https://cdn.touretappe.nl/images/giro/2020/etappe-15-piancavallo.jpg'},
       {type:'finish', label:'Finishprofiel', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/bNKyoa8kVOb4Ncz3cvm4_150426-035508.jpg?v=20260415155508'}
     ]},
   {num:21,date:'31 mei',route:'Rome – Rome',km:131,hm:1329,type:'rome',stars:1,badges:['rome'],verdict:'Traditionele slotrit in Rome. Start vanuit Rome-EUR, een uitstapje naar Ostia en daarna negen ronden door het stadscentrum langs de monumenten. Het klassement staat vast en GC-mannen rijden beschermd. Sprinters hebben hier hun laatste kans.<br><br><b>Finishtype:</b> Vlakke massasprint, stadscircuit Rome.<br><b>Verwacht scenario:</b> Massasprint. Ceremonieel voor de klassementsrenners, competitief voor de sprinters. Een ontsnapping is theoretisch mogelijk maar in Rome zeldzaam.',profiles:[
-      {type:'etappe', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-21-profiel.jpg'},
+      {type:'rome', label:'Etappeprofiel', src:'https://cdn.touretappe.nl/images/giro/2026/etappe-21-profiel.jpg'},
       {type:'finish', label:'Finishprofiel', src:'https://static2.giroditalia.it/wp-content/uploads/2026/04/zMUCHJWRWAneiKNZDUrJ_150426-041135.jpg?v=20260415161135'}
     ]}
 ];
@@ -727,9 +727,14 @@ const weeks = [
 ];
 
 const badgeMap = {
-  sprint:['badge-sprint','Sprint'], berg:['badge-berg','Bergetappe'],
-  heuvel:['badge-heuvel','Heuvelrit'], tijdrit:['badge-tijdrit','Tijdrit'],
-  bergaankomst:['badge-aankomst','Finish bergop'], rome:['badge-rome','Slotrit Rome']
+  sprint:        ['badge-sprint',        'Sprint'],
+  sprint_inhoud: ['badge-sprint-inhoud', 'Sprint met inhoud'],
+  tech_sprint:   ['badge-tech-sprint',   'Technische sprint'],
+  berg:          ['badge-berg',          'Bergetappe'],
+  heuvel:        ['badge-heuvel',        'Heuvelrit'],
+  tijdrit:       ['badge-tijdrit',       'Tijdrit'],
+  bergaankomst:  ['badge-aankomst',      'Finish bergop'],
+  rome:          ['badge-rome',          'Slotrit Rome']
 };
 
 function makeBadges(arr) {
